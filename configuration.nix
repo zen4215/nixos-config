@@ -78,12 +78,14 @@
 
   ];
 
-  programs.niri.enable = true;
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   zramSwap = {
     enable = true;
     memoryPercent = 200;
   };
+
+  programs.niri.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
