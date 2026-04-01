@@ -3,7 +3,7 @@
 {
   zramSwap = {
     enable = true;
-    memoryPercet = 200;
+    memoryPercent = 200;
   };
 }
 
