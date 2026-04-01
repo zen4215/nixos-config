@@ -3,15 +3,14 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+
+    import-tree.url = "github:vic/import-tree";
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: {
-    nixosConfigurations.my-nixos = nixpkgs.lib.nixosSystem {
+  outputs = { self, nixpkgs, import-tree, ... }@inputs: {
+    nixosConfigurations."nixos" = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      modules = [
-        ./configuration.nix
-        ./hardware-configuration.nix
-      ];
+      modules = [(import-tree ./mods)];
     };
   };
 }
