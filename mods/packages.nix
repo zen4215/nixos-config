@@ -6,6 +6,7 @@
     git
 
     niri
+    udev-gothic-nf
     wl-clipboard
     alacritty
     firefox
