@@ -4,6 +4,7 @@
   environment.systemPackages = with pkgs; [
     helix
     git
+    nil
 
     niri
     udev-gothic-nf
